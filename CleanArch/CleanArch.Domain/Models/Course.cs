@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CleanArch.Domain.Models
 {
-    internal class Course
+    public class Course
     {
+        [Key]
         public int ld {get; set;}
         public string Name { get; set; }
         public string Description { get; set; }
