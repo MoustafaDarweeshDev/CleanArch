@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CleanArch.Infra.Data\CleanArch.Infra.Data.csproj" />
+    <ProjectReference Include="..\CleanArch.lnfra.loC\CleanArch.lnfra.loC.csproj" />
   </ItemGroup>
 
 </Project>

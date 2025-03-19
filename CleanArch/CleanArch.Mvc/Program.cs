@@ -1,4 +1,5 @@
 using CleanArch.Infra.Data.Context;
+using CleanArch.lnfra.loC;
 using CleanArch.Mvc.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -13,6 +14,8 @@ var UniversityDBConnectionString = builder.Configuration.GetConnectionString("Un
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+//dependance injection
+DependencyContainer.RegisterService(builder.Services);
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
